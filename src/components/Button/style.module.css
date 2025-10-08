@@ -1,0 +1,36 @@
+.button {
+	--accent-color: #0071e3;
+	--accent-color-hover: #0077ed;
+
+	display: inline-block;
+	padding: 11px 21px;
+
+	border: 1px solid var(--accent-color);
+	background: var(--accent-color);
+	border-radius: 80px;
+
+	font-size: 17px;
+	font-weight: 400;
+	color: #fff;
+}
+
+.button:hover {
+	background: var(--accent-color-hover);
+}
+
+.button--outline {
+	background-color: transparent;
+	color: var(--accent-color);
+}
+
+.button--outline:hover {
+	background: var(--accent-color);
+	color: #fff;
+}
+
+@media (max-width: 998px) {
+	.button {
+		padding: 7px 15px;
+		font-size: 14px;
+	}
+}
