@@ -5,8 +5,18 @@ import style from './style.module.css';
 
 import Button from '../Button';
 
-const Hero = () => {
+const Hero = ({ data }) => {
 	const [isMobile, setIsMobile] = useState(false);
+
+	const {
+		type,
+		title,
+		subtitle,
+		imageDesktop,
+		imageMobile,
+		altText,
+		buttons,
+	} = data;
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -18,15 +28,25 @@ const Hero = () => {
 		window.addEventListener('resize', handleResize);
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
-
+	console.log('data', data);
+	let additionalClass = '';
+	if (type === 'white') {
+		additionalClass = style['hero--white'];
+	}
 	return (
-		<div className={style.hero}>
+		<div className={`${style.hero} ${additionalClass}`}>
 			<div className={style.hero__textContainer}>
-				<h1 className={style.hero__title}>iPhone 17 Pro</h1>
-				<p className={style.hero__subtitle}>All out Pro.</p>
+				<h1 className={style.hero__title}>{title}</h1>
+				<p className={style.hero__subtitle}>{subtitle}</p>
 				<div className={style.hero__links}>
-					<Button title="Learn more" />
-					<Button title="Buy" type="outline" />
+					{buttons.map(({ title, type, link, id }) => (
+						<Button
+							title={title}
+							type={type}
+							link={link}
+							key={id}
+						/>
+					))}
 				</div>
 			</div>
 
@@ -37,8 +57,8 @@ const Hero = () => {
 			>
 				{isMobile ? (
 					<Image
-						src="/img/hero/iphone-17-pro-mobile.jpg"
-						alt="Hero image"
+						src={imageMobile}
+						alt={altText}
 						fill
 						objectFit="cover"
 						quality={85}
@@ -46,8 +66,8 @@ const Hero = () => {
 					/>
 				) : (
 					<Image
-						src="/img/hero/iphone-17-pro.jpg"
-						alt="Hero image"
+						src={imageDesktop}
+						alt={altText}
 						fill
 						objectFit="cover"
 						quality={100}

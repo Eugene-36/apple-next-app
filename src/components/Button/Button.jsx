@@ -1,6 +1,6 @@
 import style from './style.module.css';
 
-const Button = ({ title, type }) => {
+const Button = ({ title, type, link }) => {
 	let additionalClass = '';
 	if (type === 'outline') {
 		additionalClass = style['button--outline'];
@@ -8,7 +8,7 @@ const Button = ({ title, type }) => {
 		additionalClass = style['button--filled'];
 	}
 	return (
-		<a href="#" className={`${style.button} ${additionalClass}`}>
+		<a href={link} className={`${style.button} ${additionalClass}`}>
 			{title}
 		</a>
 	);

@@ -24,7 +24,7 @@
 	color: rgba(255, 255, 255, 0.8);
 }
 .nav__icon {
-	fill: #fff;
+	fill: currentColor;
 }
 .nav__links-item {
 	line-height: 1;

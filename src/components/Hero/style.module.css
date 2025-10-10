@@ -1,9 +1,17 @@
 .hero {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
 	position: relative;
 
 	height: 692px;
 	background: black;
 	color: #fff;
+}
+.hero--white {
+	background: #f5f5f5;
+	color: #000;
 }
 .hero__textContainer {
 	position: relative;
@@ -23,6 +31,7 @@
 	font-weight: 500;
 }
 .hero__subtitle {
+	max-width: 360px;
 	font-size: 28px;
 	margin-top: 6px;
 }
@@ -57,5 +66,8 @@
 	}
 	.hero__links {
 		margin-top: 12px;
+	}
+	.hero__subtitle {
+		max-width: 240px;
 	}
 }
