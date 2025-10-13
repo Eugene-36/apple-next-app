@@ -1,12 +1,18 @@
 'use client';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import style from './style.module.css';
+import smallStyles from './small.module.css';
+import normalStyle from './style.module.css';
 
 import Button from '../Button';
 
-const Hero = ({ data }) => {
+const Hero = ({ data, size }) => {
 	const [isMobile, setIsMobile] = useState(false);
+	let style = normalStyle;
+
+	if (size === 'small') {
+		style = smallStyles;
+	}
 
 	const {
 		type,
@@ -36,7 +42,22 @@ const Hero = ({ data }) => {
 	return (
 		<div className={`${style.hero} ${additionalClass}`}>
 			<div className={style.hero__textContainer}>
-				<h1 className={style.hero__title}>{title}</h1>
+				{title?.type === 'image' ? (
+					<h3 className={style.hero__titleImageContainer}>
+						<Image
+							src={title.image}
+							alt={title.alt}
+							quality={100}
+							priority
+							fill
+							objectFit="contain"
+						/>
+						<span className="visuallyhidden">{title.alt}</span>
+					</h3>
+				) : (
+					<h1 className={style.hero__title}>{title}</h1>
+				)}
+
 				<p className={style.hero__subtitle}>{subtitle}</p>
 				<div className={style.hero__links}>
 					{buttons.map(({ title, type, link, id }) => (

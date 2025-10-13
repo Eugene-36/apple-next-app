@@ -19,4 +19,16 @@ body {
 .section-heroes {
 	display: grid;
 	gap: 12px;
+	padding-bottom: 12px;
+}
+.section-promo-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 12px;
+}
+
+@media (max-width: 998px) {
+	.section-promo-grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }

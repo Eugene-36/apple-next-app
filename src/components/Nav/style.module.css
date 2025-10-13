@@ -27,6 +27,13 @@
 	fill: currentColor;
 }
 .nav__links-item {
+	flex-shrink: 0;
 	line-height: 1;
 	margin-top: -4px;
+}
+
+@media (max-width: 998px) {
+	.nav__links {
+		gap: 8px;
+	}
 }
