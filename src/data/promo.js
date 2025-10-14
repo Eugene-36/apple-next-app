@@ -2,7 +2,11 @@ export const promos = [
 	{
 		id: 13,
 		type: 'white',
-		title: 'Watch Series 11',
+		title: {
+			alt: 'Watch Series 11',
+			type: 'image',
+			image: '/img/promo/title-watchSeries11.png',
+		},
 		subtitle: 'The ultimate way to watch your health.',
 		imageDesktop: '/img/promo/watch.jpg',
 		imageMobile: '/img/promo/watch-mobile.jpg',
@@ -41,7 +45,11 @@ export const promos = [
 	{
 		id: 16,
 		type: 'white',
-		title: 'iPad Air',
+		title: {
+			alt: 'iPad Air',
+			type: 'image',
+			image: '/img/promo/title-ipadAir.png',
+		},
 		subtitle: 'Now supercharged by the M3 chip.',
 		imageDesktop: '/img/promo/ipad.jpg',
 		imageMobile: '/img/promo/ipad-mobile.jpg',
@@ -54,7 +62,11 @@ export const promos = [
 	{
 		id: 17,
 		type: 'white',
-		title: 'Apple Trade In',
+		title: {
+			alt: 'Apple Trade In',
+			type: 'image',
+			image: '/img/promo/title-tradein.png',
+		},
 		subtitle:
 			'Get up to $200–$700 in credit when you trade in iPhone 13 or higher.',
 		imageDesktop: '/img/promo/tradein.jpg',

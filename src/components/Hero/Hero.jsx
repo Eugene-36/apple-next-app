@@ -34,7 +34,6 @@ const Hero = ({ data, size }) => {
 		window.addEventListener('resize', handleResize);
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
-	console.log('data', data);
 	let additionalClass = '';
 	if (type === 'white') {
 		additionalClass = style['hero--white'];
@@ -47,7 +46,6 @@ const Hero = ({ data, size }) => {
 						<Image
 							src={title.image}
 							alt={title.alt}
-							quality={100}
 							priority
 							fill
 							objectFit="contain"
@@ -82,7 +80,6 @@ const Hero = ({ data, size }) => {
 						alt={altText}
 						fill
 						objectFit="cover"
-						quality={85}
 						priority
 					/>
 				) : (
@@ -91,7 +88,6 @@ const Hero = ({ data, size }) => {
 						alt={altText}
 						fill
 						objectFit="cover"
-						quality={100}
 						priority
 					/>
 				)}
