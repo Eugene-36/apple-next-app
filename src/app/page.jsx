@@ -9,9 +9,9 @@ export default function Home() {
 			<Navigation />
 			<section className="section-heroes">
 				{heroes.map((hero, id) => (
-					<>
-						<Hero data={hero} key={id} />
-					</>
+					<div key={id}>
+						<Hero data={hero} />
+					</div>
 				))}
 			</section>
 			<section className="section-promo-grid">

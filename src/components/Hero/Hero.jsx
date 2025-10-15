@@ -47,8 +47,8 @@ const Hero = ({ data, size }) => {
 							src={title.image}
 							alt={title.alt}
 							priority
-							fill
-							objectFit="contain"
+							fill={true}
+							style={{ objectFit: 'contain' }}
 						/>
 						<span className="visuallyhidden">{title.alt}</span>
 					</h3>
@@ -78,16 +78,16 @@ const Hero = ({ data, size }) => {
 					<Image
 						src={imageMobile}
 						alt={altText}
-						fill
-						objectFit="cover"
+						fill={true}
+						style={{ objectFit: 'cover' }}
 						priority
 					/>
 				) : (
 					<Image
 						src={imageDesktop}
 						alt={altText}
-						fill
-						objectFit="cover"
+						fill={true}
+						style={{ objectFit: 'cover' }}
 						priority
 					/>
 				)}
