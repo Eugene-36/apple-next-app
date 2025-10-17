@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import HeroSlider from '@/components/HeroSlider/HeroSlider';
 import Navigation from '@/components/Nav';
 import { heroes } from '@data/heroes';
 import { promos } from '@data/promo';
@@ -18,6 +19,9 @@ export default function Home() {
 				{promos.map((promo, id) => (
 					<Hero data={promo} size="small" key={id} />
 				))}
+			</section>
+			<section className="section-hero-slider">
+				<HeroSlider />
 			</section>
 		</>
 	);
