@@ -1,0 +1,24 @@
+.slide {
+	padding: 20px;
+	position: relative;
+	display: grid;
+	grid-template-columns: 196px auto;
+	gap: 20px;
+
+	@media (max-width: 600px) {
+		grid-template-columns: 114px auto;
+		padding: 10px;
+	}
+}
+.img {
+	border-radius: 8px;
+	overflow: hidden;
+}
+.title {
+	align-content: center;
+}
+.badge {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}

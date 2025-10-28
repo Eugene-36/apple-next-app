@@ -10,10 +10,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 const HeroSlider = () => {
 	return (
 		<Swiper
+			id="hero-slider"
 			spaceBetween={30}
 			slidesPerView={'auto'}
 			centeredSlides={true}
-			className="mySwiper"
 			autoplay={{ delay: 2500, disableOnInteraction: false }}
 			modules={[Autoplay, Pagination]}
 			pagination={{

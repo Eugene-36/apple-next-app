@@ -1,0 +1,48 @@
+export const carousel = [
+	{
+		id: 1,
+		srcImg: '/img/carousel/01.jpg',
+		alt: 'Carousel text alt',
+		linkText: 'Learn more',
+		linkUrl: '#',
+		type: 'content',
+		styles: { backgroundColor: '#c62fa3', color: '#000000' },
+	},
+	{
+		id: 2,
+		srcImg: '/img/carousel/02.jpg',
+		alt: 'Carousel text alt',
+		linkText: 'Watch now',
+		linkUrl: '#',
+		type: 'content',
+		styles: { backgroundColor: '#333', color: '#fff' },
+	},
+	{
+		id: 3,
+		srcImg: '/img/carousel/03.jpg',
+		alt: 'Carousel text alt',
+		linkText: 'learn more',
+		linkUrl: '#',
+	},
+	{
+		id: 4,
+		srcImg: '/img/carousel/04.jpg',
+		alt: 'Carousel text alt',
+		linkText: 'Play now',
+		linkUrl: '#',
+	},
+	{
+		id: 5,
+		srcImg: '/img/carousel/05.jpg',
+		alt: 'Carousel text alt',
+		linkText: 'learn more',
+		linkUrl: '#',
+	},
+	{
+		id: 6,
+		srcImg: '/img/carousel/06.jpg',
+		alt: 'Carousel text alt',
+		linkText: 'Watch more',
+		linkUrl: '#',
+	},
+];

@@ -1,3 +1,4 @@
+import Carousel from '@/components/Carousel/Carousel';
 import Hero from '@/components/Hero';
 import HeroSlider from '@/components/HeroSlider/HeroSlider';
 import Navigation from '@/components/Nav';
@@ -22,6 +23,9 @@ export default function Home() {
 			</section>
 			<section className="section-hero-slider">
 				<HeroSlider />
+			</section>
+			<section className="section-carousel">
+				<Carousel />
 			</section>
 		</>
 	);
