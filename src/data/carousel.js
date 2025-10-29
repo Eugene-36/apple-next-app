@@ -7,6 +7,8 @@ export const carousel = [
 		linkUrl: '#',
 		type: 'content',
 		styles: { backgroundColor: '#c62fa3', color: '#000000' },
+		icon: 'Music',
+		title: 'Taylor Swift: The Eras Tour',
 	},
 	{
 		id: 2,
@@ -16,6 +18,8 @@ export const carousel = [
 		linkUrl: '#',
 		type: 'content',
 		styles: { backgroundColor: '#333', color: '#fff' },
+		icon: 'Music',
+		title: 'Seth Rogen’s Hilarity for Charity',
 	},
 	{
 		id: 3,
@@ -23,6 +27,8 @@ export const carousel = [
 		alt: 'Carousel text alt',
 		linkText: 'learn more',
 		linkUrl: '#',
+		icon: 'fitnessPlus',
+		title: 'Fitness+',
 	},
 	{
 		id: 4,
@@ -30,6 +36,8 @@ export const carousel = [
 		alt: 'Carousel text alt',
 		linkText: 'Play now',
 		linkUrl: '#',
+		icon: 'Arcade',
+		title: 'Arcade Games',
 	},
 	{
 		id: 5,
@@ -37,6 +45,8 @@ export const carousel = [
 		alt: 'Carousel text alt',
 		linkText: 'learn more',
 		linkUrl: '#',
+		icon: 'fitnessPlus',
+		title: 'Fitness+',
 	},
 	{
 		id: 6,
@@ -44,5 +54,7 @@ export const carousel = [
 		alt: 'Carousel text alt',
 		linkText: 'Watch more',
 		linkUrl: '#',
+		icon: 'Music',
+		title: 'Music Videos',
 	},
 ];

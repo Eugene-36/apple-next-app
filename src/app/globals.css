@@ -72,6 +72,9 @@ body {
 #hero-slider .swiper-slide {
 	width: 1250px !important;
 }
+#carousel-slider .swiper-wrapper {
+	transition-timing-function: linear !important;
+}
 @media (max-width: 1400px) {
 	#hero-slider .swiper-slide {
 		width: 80% !important;
