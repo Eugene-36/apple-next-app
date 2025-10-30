@@ -17,7 +17,7 @@ const Carousel = () => {
 			slidesPerView={'auto'}
 			centeredSlides={true}
 			autoplay={{ delay: 0, disableOnInteraction: false }}
-			// modules={[Autoplay]}
+			modules={[Autoplay]}
 			speed={6000}
 			loop={true}
 		>
@@ -47,7 +47,9 @@ const Carousel = () => {
 									{icon === 'Arcade' && <Arcade />}
 								</div>
 								<div className={s.linkOverlay}>
-									<a href="#" className={s.linkText}>{linkText}</a>
+									<a href="#" className={s.linkText}>
+										{linkText}
+									</a>
 								</div>
 							</div>
 						)}
@@ -67,6 +69,11 @@ const Carousel = () => {
 									{icon === 'Music' && <Music />}
 									{icon === 'fitnessPlus' && <FitnessPlus />}
 									{icon === 'Arcade' && <Arcade />}
+								</div>
+								<div className={s.linkOverlay}>
+									<a href="#" className={s.linkText}>
+										{linkText}
+									</a>
 								</div>
 							</div>
 						)}

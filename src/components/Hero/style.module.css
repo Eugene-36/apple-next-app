@@ -42,6 +42,7 @@
 	gap: 14px;
 	margin-top: 19px;
 }
+
 @media (max-width: 1068px) {
 	.hero {
 		height: 650px;
