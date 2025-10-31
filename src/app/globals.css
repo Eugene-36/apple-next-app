@@ -58,6 +58,9 @@ body {
 	height: 100%;
 	padding-bottom: 40px !important;
 }
+#carousel-slider {
+	padding-bottom: 0px !important;
+}
 #hero-slider .swiper-pagination {
 	bottom: 6px !important;
 }
@@ -76,6 +79,17 @@ body {
 }
 #carousel-slider .swiper-wrapper {
 	transition-timing-function: linear !important;
+}
+.append-2-slides {
+	width: 24px;
+	height: 24px;
+	margin: 16px;
+	border-radius: 50%;
+	background-color: #d2d2d7;
+	cursor: pointer;
+}
+.pauseButton {
+	text-align: right;
 }
 @media (max-width: 1400px) {
 	#hero-slider .swiper-slide {

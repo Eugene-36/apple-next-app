@@ -75,3 +75,31 @@ export const Arcade = ({ className }) => {
 		</svg>
 	);
 };
+export const Play = ({ className }) => {
+	return (
+		<svg
+			width="12"
+			height="12"
+			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+			className={className}
+		>
+			<path d="M8 5V19L19 12L8 5Z" fill="black" />
+		</svg>
+	);
+};
+export const Pause = ({ className }) => {
+	return (
+		<svg
+			width="12"
+			height="12"
+			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path d="M6 5H10V19H6V5Z" fill="black" />
+			<path d="M14 5H18V19H14V5Z" fill="black" />
+		</svg>
+	);
+};
