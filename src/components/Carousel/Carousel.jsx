@@ -31,13 +31,12 @@ const Carousel = () => {
 							>
 								<div className={s.img}>
 									<Image
-										key={id}
-										src={srcImg}
 										width={196}
 										height={196}
+										src={srcImg}
+										alt={alt}
 										sizes="(max-width: 768px) 114px, 196px"
 										priority
-										alt={alt}
 									/>
 								</div>
 								<div className={s.title}>{title}</div>

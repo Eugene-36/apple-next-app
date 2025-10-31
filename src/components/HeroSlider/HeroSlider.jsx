@@ -12,9 +12,7 @@ const HeroSlider = () => {
 	const [swiperRef, setSwiperRef] = useState(null);
 	const { isPaused } = useStore();
 	swiperRef?.autoplay.start();
-	if (isPaused) {
-		swiperRef?.autoplay.stop();
-	}
+	if (isPaused) swiperRef?.autoplay.stop();
 
 	return (
 		<Swiper
