@@ -2,21 +2,25 @@
 import useStore from '@/lib/store.js';
 import { slides } from '@data/hero-slider';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useRef } from 'react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const HeroSlider = () => {
-	const [swiperRef, setSwiperRef] = useState(null);
-	const { isPaused } = useStore();
-	swiperRef?.autoplay.start();
-	if (isPaused) swiperRef?.autoplay.stop();
+	const swiperRef = useRef(null);
+	const isPaused = useStore((s) => s.isPaused);
+	useEffect(() => {
+		const swiper = swiperRef.current;
+		if (!swiper) return;
+		if (isPaused) swiper.autoplay.stop();
+		else swiper.autoplay.start();
+	}, [isPaused]);
 
 	return (
 		<Swiper
-			onSwiper={setSwiperRef}
+			onSwiper={(instance) => (swiperRef.current = instance)}
 			id="hero-slider"
 			spaceBetween={30}
 			slidesPerView={'auto'}

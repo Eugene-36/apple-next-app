@@ -15,8 +15,11 @@ const Carousel = () => {
 			id="carousel-slider"
 			spaceBetween={15}
 			slidesPerView={'auto'}
-			centeredSlides={true}
-			autoplay={{ delay: 0, disableOnInteraction: false }}
+			autoplay={{
+				delay: 0,
+				pauseOnMouseEnter: true,
+				disableOnInteraction: false,
+			}}
 			modules={[Autoplay]}
 			speed={6000}
 			loop={true}

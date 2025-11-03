@@ -7,7 +7,7 @@ const PauseButton = () => {
 	return (
 		<div className="pauseButton">
 			<button
-				onClick={() => togglePause(false)}
+				onClick={togglePause}
 				type="button"
 				className="append-2-slides"
 			>
